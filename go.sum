@@ -1,2 +1,4 @@
 github.com/sigstore/cosign/v2 v2.2.0 h1:MV/ALD1/e/JgxXXCdCNxlIRk2NB3Irb4MKPozd8SPR8=
 github.com/sigstore/cosign/v2 v2.2.0/go.mod h1:Kcm7lTZbpiEpA3wPCqRygTUdLpX8CNT+36rODTCBr1M=
+github.com/sigstore/cosign/v2 v2.2.1 h1:HauwPOMYYaVdQsnvUbF0P+ZsVPrkTB0G7Eq65+z1bQc=
+github.com/sigstore/cosign/v2 v2.2.1/go.mod h1:4l1hELKWoFYzZ/p7+umrK6dhdBoBW0JbQRCIjOZIM9g=
