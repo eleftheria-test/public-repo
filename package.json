@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chromedriver": "^119.0.0",
     "lodash": "^4.17.21",
     "static-server": "^2.2.1"
   }
