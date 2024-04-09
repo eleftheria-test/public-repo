@@ -3,6 +3,7 @@ annotated-types==0.6.0
 black==23.11.0
 click==8.1.7
 colorama==0.4.6
+Django==4.2.7
 dnspython==2.4.2
 docstring-parser==0.15
 email-validator==2.1.0.post1
