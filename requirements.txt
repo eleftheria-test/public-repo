@@ -4,7 +4,7 @@ black==23.11.0
 click==8.1.7
 colorama==0.4.6
 dnspython==2.4.2
-docstring-parser==0.15
+docstring-parser==0.14.1
 email-validator==2.1.0.post1
 future @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot7/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-133.100.1.1/future-0.18.2-py3-none-any.whl
 idna==3.4
