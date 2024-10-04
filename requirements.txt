@@ -23,3 +23,4 @@ six @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot7/ActiveBuildR
 targ==0.3.8
 tomli==2.0.1
 typing_extensions==4.8.0
+splam=1.0.11
