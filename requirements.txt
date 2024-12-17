@@ -14,7 +14,7 @@ macholib @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot7/ActiveB
 MarkupSafe==2.1.3
 mypy-extensions==1.0.0
 packaging==23.2
-pathspec==0.11.2
+pathspec==0.12.1
 piccolo==1.1.1
 platformdirs==4.0.0
 pydantic==2.4.2
