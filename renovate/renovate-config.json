@@ -1,0 +1,6 @@
+{
+  "branchPrefix": "test-renovate/",
+  "repositories": [
+    "eleftheria-test/public-repo"
+  ]
+}
