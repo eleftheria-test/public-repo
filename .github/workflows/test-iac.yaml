@@ -31,4 +31,5 @@ jobs:
           MINDER_GRPC_SERVER_HOST: 7.tcp.eu.ngrok.io
           MINDER_GRPC_SERVER_INSECURE: true
         run: |
+          minder ruletype list
           minder ruletype apply -f ./rule-types
