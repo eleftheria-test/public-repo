@@ -1,0 +1,34 @@
+name: Minder apply from repo
+on: workflow_dispatch
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  install-rule-type:
+    runs-on: ubuntu-latest
+    name: Install rule types
+    steps:
+      - name: Fetch ID token
+        run: |
+          set -x -e
+          echo $GITHUB_TOKEN
+          URL="${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=minder"
+          curl -o .action-token -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" $URL
+          echo "MINDER_AUTH_TOKEN=$(jq -r .value <.action-token)" >> "$GITHUB_ENV"
+      - name: Install cosign to verify Minder
+        uses: sigstore/cosign-installer@v3.6.0
+      - name: Install Minder Client
+        uses: stacklok/minder-client-installer@main
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - name: Apply Minder ruletypes
+        env:
+          MINDER_PROJECT: 509ca26f-faa3-4f85-959a-034d3cd15988
+          # Very temporary!  My ngrok endpoint
+          MINDER_GRPC_SERVER_PORT: 443
+          MINDER_GRPC_SERVER_HOST: 78eb-2a02-a210-21c3-2600-7c2d-9bf4-a44c-e8d5.ngrok-free.app
+          MINDER_GRPC_SERVER_INSECURE: false
+        run: |
+          minder ruletype apply -f ./rule-types
